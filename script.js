@@ -257,6 +257,7 @@ const totals = [bills[0] + tips[0], bills[1] + tips[1], bills[2] + tips[2]];
 console.log(bills, tips, totals);
 */
 
+/*
 // Objects
 const jonasArray = [
   "Jonas",
@@ -273,3 +274,39 @@ const jonas = {
   job: "teacher",
   friends: ["Michel", "Steven", "Peter"]
 };
+*/
+
+// Dot Vs. Bracket Notation
+const jonas = {
+  firstName: "Jonas",
+  lastName: "Schmedtmann",
+  age: 2030 - 1991,
+  job: "teacher",
+  friends: ["Michel", "Steven", "Peter"],
+};
+console.log(jonas);
+
+console.log(jonas.lastName);
+console.log(jonas["lastName"]);
+
+const nameKey = "Name";
+console.log(jonas["first" + nameKey]);
+console.log(jonas["last" + nameKey]);
+
+const interestedIn = prompt(
+  "what do you want to know about Jonas? Choose between firstName,lastName,job,age,friends"
+);
+
+if (jonas[interestedIn]) {
+  console.log(jonas[interestedIn]);
+} else {
+  console.log('Wrong Input')
+}
+
+jonas.location = 'Portugal';
+jonas['twitter'] = '@jonasschmedtman';
+console.log(jonas);
+
+console.log(
+  `${jonas.firstName} has ${jonas.friends.length} friends, and his best friend is called ${jonas.friends[0]}`
+);
